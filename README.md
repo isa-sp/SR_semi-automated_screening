@@ -1,7 +1,7 @@
 # Semi-automated screening simulations for systematic reviews of prognosis and intervention studies
 
 ### Description
-This repository contains the code for the simulations of semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies.
+This repository contains the code for the simulations of semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview tool](https://github.com/asreview).
 
 ### Python scripts
 - ASReview_main_HPC_per_sim.py
