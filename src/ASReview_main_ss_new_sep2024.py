@@ -16,6 +16,9 @@ args = parser.parse_args()
 path_data = '/home/julius_te/ispiero/systematicreviews/data/data_HPC' #'/Users/ispiero2/Documents/Research/Datasets/Systematic_reviews/Datasets_final/Clean_datasets/' 
 path_results = '/hpc/local/Rocky8/julius_te/ispiero/SR_results/new_results' #'/home/julius_te/ispiero/systematicreviews/results' #'/Users/ispiero2/Documents/Research/Results_tmp/'
 
+
+seed = 1
+
 ###
 
 # Import the intervention review datasets (numbering of the datasets is ordered by authors)
@@ -256,7 +259,7 @@ def ASReview_simulation(review_id, review_data, path_name,
     # Save the simulation
     os.chdir(path_results)
 
-    with open('sim_{review}_{simu}.p'.format(review=review_id, simu = sim),'wb') as f:
+    with open('sim_{review}_{simu}_{seed}.p'.format(review=review_id, simu = sim, seed = seed),'wb') as f:
         pickle.dump(dict_rank,f)
 
     # Return the relevant results of the simulations
@@ -323,11 +326,11 @@ def df_var_dict(review_name, df, sizes, incl_prop):
                 # If so:
                 # Sample random inclusions
                 incl = df.loc[df['label_included'] == 1].sample(
-                    n=int(unique_combinations[i][0] * unique_combinations[i][1]), replace=False, random_state=1)
+                    n=int(unique_combinations[i][0] * unique_combinations[i][1]), replace=False, random_state=seed)
                 # Sample random exclusions
                 excl = df.loc[df['label_included'] == 0].sample(
                     n=int(unique_combinations[i][0] - (unique_combinations[i][0] * unique_combinations[i][1])),
-                    replace=False, random_state=1)
+                    replace=False, random_state=seed)
                 # Create a dataframe of the inclusions and exclusions
                 df_new = pd.concat([incl, excl]).sort_values('authors').reset_index()
                 name = review_name + "_" + str(len(df_new)) + "_" + str(unique_combinations[i][1])
@@ -420,7 +423,7 @@ for review in review_dic:
 # On the HPC:
 
 for i in range(0, len(sim_list)):
-    if Path(path_results +'sim_{review_id}_{sim}.p'.format(review_id=sim_list_names[i], sim=args.sim_id)).is_file():
+    if Path(path_results +'sim_{review_id}_{sim}_{seed}.p'.format(review_id=sim_list_names[i], sim=args.sim_id, seed=seed)).is_file():
         pass
     else:
         ASReview_simulation(review_id = sim_list[i][0],
@@ -434,4 +437,5 @@ for i in range(0, len(sim_list)):
                             #n_simulations = 1000,
                             n_model_update = 10,
                             n_prior_included = 10, n_prior_excluded = 10)
+
 
