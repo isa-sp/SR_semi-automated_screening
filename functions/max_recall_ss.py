@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import collections
 
 def max_recall_ss(review_dic_ord, sample_sizes_mr):
     review_name = []
@@ -35,7 +34,7 @@ def max_recall_ss(review_dic_ord, sample_sizes_mr):
                 max_recalls.append(max_recall)
 
             if i > records:
-                max_recalls.append(np.nan)#1)
+                max_recalls.append(np.nan)
 
     review_name = [item for sublist in review_name for item in sublist]   
 
