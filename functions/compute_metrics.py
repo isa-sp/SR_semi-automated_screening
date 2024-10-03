@@ -44,7 +44,11 @@ def compute_metrics(simulations, proportions, sample_sizes, n_prior_included = 1
         recalls_ss =[]
         # (3) List to store the work saved over sampling at 95% recall (wss-95%)
         wss95 = []
-        n_saved = [] ###
+        n_saved = []
+        wss95_all = []
+        nwss95 = []
+        min_wss95_long = []
+        max_wss95_long = []
         # (4) List to store the precision at 95% recall (precisions = []) and the proportions screened at that value of precision (step = [])
         precisions = []
         step = []
@@ -57,6 +61,11 @@ def compute_metrics(simulations, proportions, sample_sizes, n_prior_included = 1
             review_length = len(df_orig)
             df = df_orig[training_set_size:review_length]
 
+            n_inclusions = sum(df_orig['label'])
+            n_exclusions = review_length - n_inclusions
+            max_wss95 = ((n_exclusions + (n_inclusions * (1-0.95))) / review_length) - (1-0.95) 
+            min_wss95 = ((0 + (n_inclusions * (1-0.95))) / review_length) - (1-0.95)
+            
             recs = []
             precs = []
             specs = []
@@ -141,19 +150,28 @@ def compute_metrics(simulations, proportions, sample_sizes, n_prior_included = 1
 
                 TP_at_step = sum(labels_at_step)
                 FN_at_step = sum(labels_after_step)
+                FP_at_step = len(labels_at_step) - TP_at_step
+                TN_at_step = len(labels_after_step) - FN_at_step
                 
                 #rec = round((TP_at_step / (TP_at_step + FN_at_step)), 2)
                 rec = TP_at_step / (TP_at_step + FN_at_step)
                         
                 # When the proportion of screened records at which recall is 95% is found,
-                # store the proportion and calculate the wss@95%
+                # store the proportion and calculate the (n-)wss@95%
                 if rec >= 0.95:
                     step.append(steps_prec[k])
-                    wss95.append(((review_length-cutoff)/review_length) - 0.05) # Used to be: (1-steps_prec[k])
-                    n_saved.append((review_length-cutoff))###
+                    wss95.append(((review_length-cutoff)/review_length) - 0.05) 
+                    n_saved.append((review_length-cutoff))
+
+                    wss95_temp = (((review_length - cutoff) / review_length) - 0.05)
+                    nwss95.append((wss95_temp - min_wss95) / (max_wss95 - min_wss95))
+                    wss95_all.append(wss95_temp)
+                    min_wss95_long.append(min_wss95)
+                    max_wss95_long.append(max_wss95)
+                    
                     break
             
-        # (1) Create data frame with the metrics at different proportions screened
+        # (1) Create dataframe with the metrics at different proportions screened
         simulations_prop = list(np.repeat(sim, len(proportions)))
         props = [item for sublist in [proportions]*len(sim) for item in sublist]
         
@@ -164,22 +182,23 @@ def compute_metrics(simulations, proportions, sample_sizes, n_prior_included = 1
                                 'Specificity' : [item for sublist in specificities_prop for item in sublist],
                                 'Accuracy' : [item for sublist in accuracies_prop for item in sublist],
                                }) 
-        # (2) Create a data frame with the recall at different sample sizes screened
+        # (2) Create a dataframe with the recall at different sample sizes screened
         simulations_ss = list(np.repeat(sim, len(sample_sizes)))
         ss = [item for sublist in [sample_sizes]*len(sim) for item in sublist]
         df_ss = pd.DataFrame({'Simulation' : simulations_ss,
                               'Sample size' : ss,
                               'Recall' : [item for sublist in recalls_ss for item in sublist]
                              }) 
-        # (3) Create a data frame with the WSS at 0.95 recall
+        # (3) Create a dataframe with the WSS at 0.95 recall
         df_wss = pd.DataFrame({'Simulation' : sim,
                                'WSS-95%' : wss95,
                              })
         df_n_saved = pd.DataFrame({'Simulation' : sim,
                                    'Workload reduction (records)' : n_saved,
-                                  }) ###
+                                  }) 
 
-        # (4) Create a data frame with the precision at 0.95 recall
+        
+        # (4) Create a dataframe with the precision at 0.95 recall
         for l in range(0,len(step)):
             cutoff = round(float(step[l]*review_length))
             labels_at_step = df['label'][0:cutoff]
@@ -194,8 +213,18 @@ def compute_metrics(simulations, proportions, sample_sizes, n_prior_included = 1
                                 'Proportion screened' : step,
                                 'Precision' : precisions,
                              })
+
+        # (5) Create a dataframe with the nWSS at 0.95 recall
+        df_nwss = pd.DataFrame({'Simulation' : sim,
+                                'WSS' : wss95_all,
+                                'minWSS-95%' : min_wss95_long,
+                                'maxWSS-95%' : max_wss95_long,
+                                'nWSS-95%' : nwss95,
+                                'nWSS-95% 2' : nwss95_2,
+                               })
         
-        output.append((review_id, review_length, n_simulations, df_prop, df_ss, df_wss, df_n_saved, df_prec))
+            
+        output.append((review_id, review_length, n_simulations, df_prop, df_ss, df_wss, df_n_saved, df_prec, df_nwss))
         
     return output
 
