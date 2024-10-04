@@ -4,8 +4,11 @@
 This repository contains the code for the simulations of semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview tool](https://github.com/asreview).
 
 ### Python scripts
-- ASReview_main_HPC_per_sim.py
-- ASReview_main_ss.py
+The simulations were run in parallel on a High Performance Computer:
+- simulate_original_datasets.py
+- simulate_adapted_datasets.py
+The derived output could be processed locally:
+- process_results.ipynb
 
 ### Data
 The intervention reviews are derived from the data for the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR). 
