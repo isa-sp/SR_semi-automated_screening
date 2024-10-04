@@ -1,7 +1,9 @@
 # Semi-automated screening simulations for systematic reviews of prognosis and intervention studies
 
+**I. Spiero, A.M. Leeuwenberg, K.G.M. Moons, L. Hooft, J.A.A. Damen (2024). Evaluation and comparison of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies.** ___Submitted___
+
 ### Description
-This repository contains the code for the simulations of semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview tool](https://github.com/asreview).
+This repository contains the code of a simulation study on semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview tool](https://github.com/asreview). The manuscript corresponding to the current study is submitted/under review for publication.
 
 ### Python codes
 The simulations were run in parallel on a High Performance Computer:
@@ -12,9 +14,9 @@ The derived output could be processed locally:
 - process_results.ipynb
 
 ### Data
-The intervention reviews are derived from the data for the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR). 
+The prognosis reviews (Table 1) are listed and may become available in the data folder upon approval of the respective authors. The intervention reviews (Table 2) are derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be found already in the data folder.
 
-##### Table 1 | The datasets of previously conducted **prognosis reviews** that were used in the simulation are listed.
+##### Table 1 | The datasets of previously conducted **prognosis reviews** that were used in the simulation
 
 | Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Authors | Title |
 | --- | :---:   | :---: | :---: | :---: | :---: | :---: |
@@ -26,7 +28,7 @@ The intervention reviews are derived from the data for the [CLEF eHealth Task 20
 | Prog6_rcri | 6 | 3999   | 1064 (26.6)   | 107 | Vernooij *et al.* (2021) | The comparative and added prognostic value of biomarkers to the Revised Cardiac Risk Index for preoperative prediction of major adverse cardiac events and all-cause mortality in patients who undergo noncardiac surgery|
 
 
-##### Table 2 | The datasets of previously conducted **intervention reviews** that were used in the simulation are listed.
+##### Table 2 | The datasets of previously conducted **intervention reviews** that were used in the simulation
 
 | Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Authors | Title |
 | --- | :---:   | :---: | :---: | :---: | :---: | :---: |
