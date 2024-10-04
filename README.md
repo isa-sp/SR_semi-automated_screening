@@ -3,10 +3,11 @@
 ### Description
 This repository contains the code for the simulations of semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview tool](https://github.com/asreview).
 
-### Python scripts
+### Python codes
 The simulations were run in parallel on a High Performance Computer:
 - simulate_original_datasets.py
 - simulate_adapted_datasets.py
+  
 The derived output could be processed locally:
 - process_results.ipynb
 
