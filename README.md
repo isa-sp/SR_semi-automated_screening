@@ -14,7 +14,7 @@ The derived output could be processed locally:
 - process_results.ipynb
 
 ### Data
-The prognosis reviews (Table 1) are listed and may become available in the data folder upon approval of the respective authors. The intervention reviews (Table 2) are derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be found already in the data folder.
+The prognosis reviews (Table 1) are listed and may become available in the data folder upon approval of the respective authors. The intervention reviews (Table 2) are derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be found already in the data folder of this repository.
 
 ##### Table 1 | The datasets of previously conducted **prognosis reviews** that were used in the simulation
 
