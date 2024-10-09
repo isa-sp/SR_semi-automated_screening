@@ -18,7 +18,7 @@ The prognosis reviews (Table 1) are listed and may become available in the data 
 
 ##### Table 1 | The datasets of previously conducted **prognosis reviews** that were used in the simulation
 
-| Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Authors | Title |
+| Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Reference | Title |
 | --- | :---:   | :---: | :---: | :---: | :---: | :---: |
 | Prog1_reporting | 1 | 2482   | 312 (12.6)   | 166 | Andaur Navarro *et al.* (2022) | Completeness of reporting of clinical prediction models developed using supervised machine learning: a systematic review|
 | Prog2_cardio | 2 | 777   | 91 (11.7)   | 38 | Damen *et al.* (2019) | Performance of the Framingham risk models and pooled cohort equations for predicting 10-year risk of cardiovascular disease: a systematic review and meta-analysis|
@@ -30,7 +30,7 @@ The prognosis reviews (Table 1) are listed and may become available in the data 
 
 ##### Table 2 | The datasets of previously conducted **intervention reviews** that were used in the simulation
 
-| Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Authors | Title |
+| Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Reference | Title |
 | --- | :---:   | :---: | :---: | :---: | :---: | :---: |
 | Int1_CD011768 | 1 | 9160   | 54 (0.6)   | 25 | Arikpo *et al.* (2018) | Educational interventions for improving primary caregiver complementary feeding practices for children aged 24 months and under|
 | Int2_CD008170 | 2 | 12319   | 88 (0.7)   | 81 | Chen *et al.* (2018) | First‐line drugs inhibiting the renin angiotensin system versus other first‐line antihypertensive drug classes for hypertension|
