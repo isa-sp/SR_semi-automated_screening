@@ -16,7 +16,7 @@ The derived output could be processed locally:
 ### Data
 The datasets of the intervention reviews (Table 1) were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be found in the data folder of this repository.
 
-##### Table 1 | The datasets of previously conducted **intervention reviews** that were used in the simulation
+##### Table 1 | The datasets of previously conducted **intervention reviews** that were used in the simulations
 
 | Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Reference | Title |
 | --- | :---:   | :---: | :---: | :---: | :---: | :---: |
