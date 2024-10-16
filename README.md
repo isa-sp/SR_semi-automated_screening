@@ -1,7 +1,7 @@
 # Semi-automated screening simulations for systematic reviews of prognosis and intervention studies
 
 ### Description
-This repository contains the code of a simulation study on semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview](https://github.com/asreview) tool. The manuscript corresponding to the current study is in the process of submission:
+This repository contains the code of a simulation study on semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview](https://github.com/asreview) tool. The repository will be further updated upon publication of the corresponding manuscript:  
 
 **I. Spiero, A.M. Leeuwenberg, K.G.M. Moons, L. Hooft, J.A.A. Damen (2024). Evaluation of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies.** ___In submission___
 
