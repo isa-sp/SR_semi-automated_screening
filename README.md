@@ -10,7 +10,7 @@ The simulations were run in parallel on a High Performance Computer:
 - simulate_original_datasets.py
 - simulate_adapted_datasets.py
   
-The derived output ewas processed locally:
+The derived output was processed locally:
 - process_results.ipynb
 
 ### Data
