@@ -1,4 +1,4 @@
-# Import the packages
+# HPC: == ASReview_main_HPC_per_sim.py
 
 import numpy as np
 import pandas as pd
@@ -13,8 +13,8 @@ parser = argparse.ArgumentParser(description='Running simulations in  parallel')
 parser.add_argument('-sim_id', type=int, default=1, help='Number')
 args = parser.parse_args()
 
-path_data = '../data/'
-path_results = '../output/simulations_original_datasets/'
+path_data = '../data/' #HPC: '/home/julius_te/ispiero/systematicreviews/data/data_HPC'
+path_results = '../output/simulations_original_datasets/' #HPC: '/hpc/local/Rocky8/julius_te/ispiero/SR_results' 
 
 # Import the intervention review datasets (numbering of the datasets is ordered by authors)
 os.chdir(path_data)
