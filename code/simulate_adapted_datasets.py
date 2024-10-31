@@ -1,3 +1,5 @@
+# == ASReview_main_ss_new_sep2024.py
+
 import numpy as np
 import pandas as pd
 import pickle
@@ -11,8 +13,8 @@ parser = argparse.ArgumentParser(description='Running simulations in  parallel')
 parser.add_argument('-sim_id', type=int, default=1, help='Number')
 args = parser.parse_args()
 
-path_data = '../data/'
-path_results = '../output/simulations_adapted_datasets/'
+path_data = '../data/' #HPC: '/home/julius_te/ispiero/systematicreviews/data/data_HPC' 
+path_results = '../output/simulations_adapted_datasets/' #HPC: '/hpc/local/Rocky8/julius_te/ispiero/SR_results/new_results'
 
 seed = 1
 
