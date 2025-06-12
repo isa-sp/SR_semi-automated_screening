@@ -1,4 +1,4 @@
-## Reproducible example for the conduction of simulations on a local device
+## Reproducible example for the conduct of simulations on a local device
 
 ### Description
 This folder contains the code to reproduce the simulations of semi-automated title-abstract screening locally. 
@@ -39,17 +39,20 @@ In case other datasets are used, make sure they adhere to the following characte
 - Data structure: the data should contain at least the columns 'title' (str), 'abstract' (str), and 'label_included' (int; 1 or 0).
 - Number of inclusions: the data should contain at least 10 inclusions and 10 exclusions (i.e., at least 10 1s and 10 0s in the 'label_included' column, since we use the default setting of 10 inclusions and 10 exclusions as the training data to initiate the ranking for semi-autoamted screening.
 
-#### Step 3: perform simulations of semi-automated screening
+#### Step 3: Perform simulations of semi-automated screening
 Run the ```simulate_datasets.py``` script to conduct simulations of semi-automated screening using the [ASReview](https://github.com/asreview) tool. The script outputs the rankings based on the provided datasets in the data/processed folder and the settings within the script. Currently, all settings are set to default and two modelling methods are simulated: tf-idf with logistic regression and tf-idf with naive bayes. The modeling methods and other settings that can be altered are:
-- train_model 
-- query_model 
-- balance_model 
-- feature_model
-- n_simulations 
-- n_model_update 
-- n_prior_included
-- n_prior_excluded
+- *train_model* 
+- *query_model* 
+- *balance_model* 
+- *feature_model*
+- *n_simulations*
+- *n_model_update* 
+- *n_prior_included*
+- *n_prior_excluded*
 
 The [documentation](https://asreview.readthedocs.io/en/stable/technical/reference/asreview.html) of the ASReview tool can be adressed for further documentation of these settings.
+
+#### Step 4: Process the results
+Run the ```process_example_results.ipynb``` to process the resulting rankings into figures and tables.
 
   
