@@ -1,21 +1,32 @@
-# Semi-automated screening simulations for systematic reviews of prognosis and intervention studies
+# Evaluation of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies
 
 ### Description
 This repository contains the code of a simulation study on semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies using the [ASReview](https://github.com/asreview) tool. The repository will be further updated upon publication of the corresponding manuscript:  
 
 **I. Spiero, A.M. Leeuwenberg, K.G.M. Moons, L. Hooft, J.A.A. Damen (2025). Evaluation of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies.** ___Accepted___
 
-### Python codes
-The simulations were run in parallel on a High Performance Computer:
+
+### Python codes (original)
+The simulations were run in parallel on a High Performance Computer (HPC) using the codes in the ./code folder:
 - simulate_original_datasets.py
 - simulate_adapted_datasets.py
   
 The derived output was processed locally:
 - process_results.ipynb
 
-### Data
-The datasets of the intervention reviews (Table 1) were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be retrieved from their repository.
 
+### Python codes (reproducible)
+For reproducibility of the simulations or the conduct of new simulations on a local device (i.e., without HPC), the following codes from the ./example/code folder can be used:
+- process_datasets.ipynb
+- simulate_datasets.py
+- processs_example_results.ipynb
+
+More detailed discription on how to use these codes for reproducibility or new simulations can be found in the README.md file in the ./example/ folder.
+
+
+### Data
+The datasets of the intervention reviews (Table 1) were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be retrieved from their repository by manually downloading them or automatically by using the data_processing.ipynb in the example/code/ folder. 
+<br>
 ##### Table 1 | The datasets of previously conducted **prognosis reviews** that were used in the simulations
 
 | Review ID | Review number | Total records    | Relevant records (%)    | Final inclusions | Reference | Title |
