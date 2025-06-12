@@ -32,9 +32,9 @@ The rankings that results from running the ```simulate_datasets.py``` script and
 
 #### Step 2: prepare the datasets
 The simulations can be conducted with any dataset. In this example we can make use of **(a)** the pre-existing data from the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) or **(b)** any other dataset. 
-##### (a) Use data from the CLEF eHealth Task 2019
+##### (a) Prepare data from the CLEF eHealth Task 2019
 Open the ```process_datasets.ipynb``` within the simulations_env environment. Run the notebook. The processed datasets should then be stored in the ./data/processed folder and are ready to be used in the simulations.
-##### (b) Other dataset(s)
+##### (b) Prepare other dataset(s)
 In case other datasets are used, make sure they adhere to the following characteristics:
 - Data structure: the data should contain at least the columns 'title' (str), 'abstract' (str), and 'label_included' (int; 1 or 0).
 - Number of inclusions: the data should contain at least 10 inclusions and 10 exclusions (i.e., at least 10 1s and 10 0s in the 'label_included' column, since we use the default setting of 10 inclusions and 10 exclusions as the training data to initiate the ranking for semi-autoamted screening.
