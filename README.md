@@ -5,8 +5,6 @@ This repository contains the code of a simulation study on semi-automated title-
 
 **I. Spiero, A.M. Leeuwenberg, K.G.M. Moons, L. Hooft, J.A.A. Damen (2025). Evaluation of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies.** ___Accepted___
 
-<img src="Figure.png" alt="Model Performance" width="1000">
-
 ### Code (original scripts)
 The simulations were run in parallel on a High Performance Computer (HPC) using the codes in the ./code folder:
 - ```simulate_original_datasets.py```
