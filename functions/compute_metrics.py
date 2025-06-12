@@ -164,7 +164,7 @@ def compute_metrics(simulations, proportions, sample_sizes, n_prior_included = 1
                     n_saved.append((review_length-cutoff))
 
                     wss95_temp = (((review_length - cutoff) / review_length) - 0.05)
-                    nwss95.append((wss95_temp - min_wss95) / (max_wss95 - min_wss95))
+                    nwss95.append((TN_at_step / (TN_at_step + FP_at_step))) #((wss95_temp - min_wss95) / (max_wss95 - min_wss95))
                     wss95_all.append(wss95_temp)
                     min_wss95_long.append(min_wss95)
                     max_wss95_long.append(max_wss95)
@@ -219,8 +219,7 @@ def compute_metrics(simulations, proportions, sample_sizes, n_prior_included = 1
                                 'WSS' : wss95_all,
                                 'minWSS-95%' : min_wss95_long,
                                 'maxWSS-95%' : max_wss95_long,
-                                'nWSS-95%' : nwss95,
-                                'nWSS-95% 2' : nwss95_2,
+                                'nWSS-95%' : nwss95
                                })
         
             
