@@ -6,7 +6,7 @@ This repository contains the code of a simulation study on semi-automated title-
 **I. Spiero, A.M. Leeuwenberg, K.G.M. Moons, L. Hooft, J.A.A. Damen (2025). Evaluation of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies.** ___Accepted___
 
 
-### Python codes (original)
+### Code (original scripts)
 The simulations were run in parallel on a High Performance Computer (HPC) using the codes in the ./code folder:
 - simulate_original_datasets.py
 - simulate_adapted_datasets.py
@@ -15,13 +15,22 @@ The derived output was processed locally:
 - process_results.ipynb
 
 
-### Python codes (reproducible)
+### Example (reproducible scripts)
 For reproducibility of the simulations or the conduct of new simulations on a local device (i.e., without HPC), the following codes from the ./example/code folder can be used:
 - process_datasets.ipynb
 - simulate_datasets.py
 - processs_example_results.ipynb
 
 More detailed discription on how to use these codes for reproducibility or new simulations can be found in the README.md file in the ./example/ folder.
+
+### Envs (conda environments)
+The following environments were used on the HPC:
+- SR_environment.yml
+- SR_environment_no-builds.yml
+
+The following environments were used on a local device (to process results and to run the example)
+- simulations_env.yml
+- simulations_env_no_builds.yml
 
 
 ### Data
