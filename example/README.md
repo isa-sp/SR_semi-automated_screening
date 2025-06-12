@@ -33,7 +33,7 @@ Make sure you have the following installed:
 - Git
 - Miniconda or Anaconda
 
-***1.2 Clone the Repository***
+***1.2 Clone the repository***
 
 Using HTTPS:
 <pre><code> git clone https://github.com/isa-sp/SR_semi-automated_screening.git </code></pre>
@@ -44,11 +44,11 @@ Or using SSH:
 
 Alternatively, download the ZIP archive from GitHub and extract it manually.
 
-***1.3 Navigate to the Project Directory***
+***1.3 Navigate to the project directory***
 
 <pre><code> cd SR_semi-automated_screening </code></pre>
 
-***1.4 Create and Activate the Conda Environment***
+***1.4 Create and activate the conda environment***
 
 Create the environment from the provided .yml file:
 
@@ -58,7 +58,7 @@ Activate the environment:
 
 <pre><code> conda activate simulations_env </code></pre>
 
-***1.5 Verify the Installation***
+***1.5 Verify the installation***
 
 Make sure all dependencies are installed correctly:
 
@@ -66,7 +66,7 @@ Make sure all dependencies are installed correctly:
 
 
 ### ✅ Step 2: prepare the datasets
-The simulations can be conducted with any dataset. In this example (and in our own evaluation study) we can make use of **(a)** the pre-existing data from the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) or **(b)** any other dataset. 
+The simulations can be conducted with any dataset. In this example we can make use of **(a)** the pre-existing data from the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) (which we also used in our own evaluation study) or **(b)** any other dataset. 
 #### (a) Prepare data from the CLEF eHealth Task 2019
 Open the ```process_datasets.ipynb``` within the simulations_env environment. Run the notebook. The processed datasets should then be stored in the ./data/processed folder and are ready to be used in the simulations.
 #### (b) Prepare other dataset(s)
