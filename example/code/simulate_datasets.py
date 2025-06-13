@@ -143,7 +143,7 @@ def ASReview_simulation(review_id, review_data, path_name,
         shutil.rmtree(project_path)
 
         # Save the simulation
-        os.chdir("../" + path_results_HPC)
+        os.chdir("../../../" + path_results_HPC)
 
         with open('sim_{review}_{simu}.p'.format(review=review_id, simu=i), 'wb') as f:
             pickle.dump(dict_rank, f)
