@@ -5,7 +5,7 @@ This folder contains the code to reproduce the simulations of semi-automated tit
 The code can also be used to run new simulations using other datasets or using altered simulation settings.
 
 ### *code*
-The following codes are available to reproduce or run simulations:
+The following scripts are available to reproduce or run simulations:
 - ```process_datasets.ipynb``` to retrieve and process a set of datasets of systematic reviews of intervention studies
 - ```simulate_datasets.py``` to simulate the semi-automated screening with the processed intervention review data (or any other dataset in the same format) by computing rankings
 - ```process_example_results.ipynb``` to process the resulting rankings into figures and tables
@@ -52,7 +52,7 @@ Alternatively, download the ZIP archive from GitHub and extract it manually.
 
 Create the environment from the provided .yml file:
 
-<pre><code> conda env create -f simulations_env.yml </code></pre>
+<pre><code> conda env create -f envs/simulations_env_no_builds.yml </code></pre>
 
 Activate the environment:
 
@@ -75,7 +75,11 @@ In case other datasets are used, make sure they adhere to the following characte
 - Number of inclusions: the data should contain at least 10 inclusions and 10 exclusions (i.e., at least 10 1s and 10 0s in the 'label_included' column, since we use the default setting of 10 inclusions and 10 exclusions as the training data to initiate the ranking for semi-autoamted screening.
 
 ### ✅ Step 3: Perform simulations of semi-automated screening
-Run the ```simulate_datasets.py``` script to conduct simulations of semi-automated screening using the [ASReview](https://github.com/asreview) tool. The script outputs the rankings based on the provided datasets in the data/processed folder and the settings within the script. Currently, all settings are set to default and two modelling methods are simulated: tf-idf with logistic regression and tf-idf with naive bayes. The modeling methods and other settings that can be altered are:
+Run the ```simulate_datasets.py``` script to conduct simulations of semi-automated screening using the [ASReview](https://github.com/asreview) tool. 
+
+<pre><code> example/code/simulate_datasets.py </code></pre>
+
+The script outputs the rankings based on the provided datasets in the data/processed folder and the settings within the script. Currently, all settings are set to default and two modelling methods are simulated: TF-IDF with logistic regression and TF-IDF with Naive Bayes. The modeling methods and other settings that can be altered are:
 - *train_model* 
 - *query_model* 
 - *balance_model* 
