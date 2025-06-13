@@ -199,9 +199,9 @@ def run_simulations(path_name, review_dic, train_models, feature_models, query_m
 
 if __name__ == "__main__":
     # Define the paths
-    path_data = "../data/processed/"
-    path_results = '../output/tmp/'
-    path_results_HPC = '../output/rankings'
+    path_data = "./example/data/processed/"
+    path_results = './example/output/tmp/'
+    path_results_HPC = './example/output/rankings'
 
     # Define the model(s) to be tested
     train_models = [LogisticClassifier(), NaiveBayesClassifier()] #[LogisticClassifier(), NaiveBayesClassifier(), SVMClassifier()]
