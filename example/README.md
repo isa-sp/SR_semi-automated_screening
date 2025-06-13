@@ -8,7 +8,7 @@ The code can also be used to run new simulations using other datasets or using a
 The following scripts are available to reproduce or run simulations:
 - ```process_datasets.ipynb``` to retrieve and process a set of datasets of systematic reviews of intervention studies
 - ```simulate_datasets.py``` to simulate the semi-automated screening with the processed intervention review data (or any other dataset in the same format) by computing rankings
-- ```process_example_results.ipynb``` to process the resulting rankings into figures and tables
+- ```process_results_example.ipynb``` to process the resulting rankings into figures and tables
 
 ### *data*
 The data were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR).
@@ -20,7 +20,7 @@ The following conda environment needs to be installed before running the codes o
 - ```simulations_env_no_builds.yml```
 
 ### *functions*
-A set of functions are available that are used by the ```process_example_results.ipynb``` notebook to compute performance metrics.
+A set of functions are available that are used by the ```process_results_example.ipynb``` notebook to compute performance metrics.
 
 ### *output* 
 The rankings that results from running the ```simulate_datasets.py``` script and are used by the ```process_datasets.ipynb``` are stored in the output folder.
@@ -92,6 +92,6 @@ The script outputs the rankings based on the provided datasets in the data/proce
 The [documentation](https://asreview.readthedocs.io/en/stable/technical/reference/asreview.html) of the ASReview tool can be adressed for further information on these settings.
 
 ### ✅ Step 4: Process the results
-Run the ```process_example_results.ipynb``` to process the resulting rankings into figures and tables to gain insight in the performance of semi-automated title-abstract screening for the simulated dataset(s) and tool settings.
+Run the ```process_results_example.ipynb``` to process the resulting rankings into figures and tables to gain insight in the performance of semi-automated title-abstract screening for the simulated dataset(s) and tool settings.
 
   
