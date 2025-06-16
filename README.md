@@ -25,18 +25,18 @@ For reproducibility of the simulations or the conduct of new simulations on a lo
 More detailed discription on how to use these codes for reproducibility or new simulations can be found in the README.md file in the ./example/ folder.
 
 ### Envs (conda environments)
-The following environments were used on the HPC:
+The following environment was used on the HPC:
 - ```SR_environment.yml```
 - ```SR_environment_no-builds.yml```
 
-The following environments were used on a local device (to process results and to run the example)
+The following environments was used on a local device (to process results and to run the example)
 - ```simulations_env.yml```
 - ```simulations_env_no_builds.yml```
   
 An instruction for setting up the local device environments is provided in the README.md file in the ./example folder.
 
 ### Data
-The datasets of the intervention reviews (Table 1) were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be retrieved from their repository by manually downloading them or automatically by using the data_processing.ipynb in the example/code/ folder. 
+The datasets of the intervention reviews (Table 1) were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) and can be retrieved from their repository by manually downloading them or automatically by using the data_processing.ipynb in the ./example/code/ folder. 
 <br>
 ##### Table 1 | The datasets of previously conducted **prognosis reviews** that were used in the simulations
 
