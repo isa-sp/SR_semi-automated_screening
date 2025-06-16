@@ -11,7 +11,7 @@ The following scripts are available to reproduce or run simulations:
 - ```process_results_example.ipynb``` to process the resulting rankings into figures and tables
 
 ### *data*
-The data were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR).
+The data were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) (Kanoulas *et al.*, 2019).
 The code in the ```data_processing.ipynb``` notebook can be used to automatically retrieve those datasets and to process those datasets into a format that can be used in the simulations by the ```simulate_datasets.py``` script.
 
 ### *envs* 
