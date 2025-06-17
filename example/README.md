@@ -1,13 +1,13 @@
 # Reproducible example for the conduct of simulations on a local device
 
 ## Description
-This folder contains the code to reproduce the simulations of semi-automated title-abstract screening locally. 
+This folder contains the code to reproduce the simulations of semi-automated title-abstract screening *locally* (i.e., without High Performance Computer). 
 The code can also be used to run new simulations using other datasets or using altered simulation settings.
 
 ### *code*
 The following scripts are available to reproduce or run simulations:
-- ```data_processing.ipynb``` to retrieve and process a set of datasets of systematic reviews of intervention studies
-- ```simulate_datasets.py``` to simulate the semi-automated screening with the processed intervention review data (or any other dataset in the same format) by computing rankings
+- ```data_processing.ipynb``` to retrieve and process a set of datasets of systematic reviews
+- ```simulate_datasets.py``` to simulate the semi-automated screening with the processed systematic review datasets (or any other dataset in the same format) by computing rankings
 - ```process_results_example.ipynb``` to process the resulting rankings into figures and tables
 
 ### *data*
@@ -72,7 +72,7 @@ Open the ```data_processing.ipynb``` within the simulations_env environment. Run
 #### (b) Prepare other dataset(s)
 In case other datasets are used, make sure they adhere to the following characteristics:
 - Data structure: the data should contain at least the columns 'title' (str), 'abstract' (str), and 'label_included' (int; 1 or 0).
-- Number of inclusions: the data should contain at least 10 inclusions and 10 exclusions (i.e., at least 10 1s and 10 0s in the 'label_included' column, since we use the default setting of 10 inclusions and 10 exclusions as the training data to initiate the ranking for semi-autoamted screening).
+- Number of inclusions: the data should contain at least 10 inclusions and 10 exclusions (i.e., at least 10 1s and 10 0s in the 'label_included' column, since we use the default setting of 10 inclusions and 10 exclusions as the training data to initiate the ranking for semi-automated screening).
 
 ### ✅ Step 3: Perform simulations of semi-automated screening
 Run the ```simulate_datasets.py``` script to conduct simulations of semi-automated screening using the [ASReview](https://github.com/asreview) tool (Van de Schoot *et al.*, 2021). 
