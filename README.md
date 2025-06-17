@@ -1,7 +1,7 @@
 # Evaluation of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies
 
 ### Description
-This repository contains the code of a simulation study on semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies. The repository will be further updated upon publication of the corresponding manuscript:  
+This repository contains the code of a simulation study on semi-automated title-abstract screening for systematic reviews of prognosis and intervention studies. The repository forms part of the following publication:  
 
 **I. Spiero, A.M. Leeuwenberg, K.G.M. Moons, L. Hooft, J.A.A. Damen (2025). Evaluation of semi-automated record screening methods for systematic reviews of prognosis studies and intervention studies.** ___Accepted___
 
