@@ -29,11 +29,11 @@ The following environment was used on the HPC:
 - ```SR_environment.yml```
 - ```SR_environment_no-builds.yml```
 
-The following environments was used on a local device (to process results and to run the example)
+The following environment was used on a local device (to process results and to run the example)
 - ```simulations_env.yml```
 - ```simulations_env_no_builds.yml```
   
-An instruction for setting up the local device environments is provided in the README.md file in the ./example folder.
+An instruction for setting up the local device environment is provided in the README.md file in the ./example folder.
 
 ### Data
 The datasets of the intervention reviews (Table 1) were derived from the publicly available data of the [CLEF eHealth Task 2019](https://github.com/CLEF-TAR/tar/tree/master/2019-TAR) (Kanoulas *et al.*, 2019) and can be retrieved from their repository by manually downloading them or automatically by using the data_processing.ipynb in the ./example/code/ folder. 
