@@ -18,9 +18,9 @@ The derived output was processed locally:
 
 ### Example (reproducible scripts)
 For reproducibility of the simulations or the conduct of new simulations on a local device (i.e., without HPC), the following codes from the ./example/code folder can be used:
-- ```process_datasets.ipynb```
+- ```data_processing.ipynb```
 - ```simulate_datasets.py```
-- ```processs_example_results.ipynb```
+- ```processs_results_example.ipynb```
 
 More detailed discription on how to use these codes for reproducibility or new simulations can be found in the README.md file in the ./example/ folder.
 
