@@ -46,7 +46,7 @@ Alternatively, download the ZIP archive from GitHub and extract it manually.
 
 ***1.3 Navigate to the project directory***
 
-<pre><code> cd path/to/project/SR_semi-automated_screening </code></pre>
+<pre><code> cd SR_semi-automated_screening </code></pre>
 
 ***1.4 Create and activate the conda environment***
 
